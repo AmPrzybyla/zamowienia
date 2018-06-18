@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Order_Table>
+  <Order>
+    <Company_name>test</Company_name>
+    <Company_mail>amadeusz.przybyla@gmail.com</Company_mail>
+    <Date_mail>2018-06-18T19:40:49.5782078+02:00</Date_mail>
+    <Sended_mail>true</Sended_mail>
+    <Products>
+      <Product>
+        <Product_name>kawa</Product_name>
+        <Product_index>124/03/01</Product_index>
+        <Product_quantity>12</Product_quantity>
+        <Product_price>35.99</Product_price>
+      </Product>
+      <Product>
+        <Product_name>lody</Product_name>
+        <Product_index>068/kor/031</Product_index>
+        <Product_quantity>6</Product_quantity>
+        <Product_price>17.99</Product_price>
+      </Product>
+      <Product>
+        <Product_name>ciastko</Product_name>
+        <Product_index>tiramisu/03</Product_index>
+        <Product_quantity>8</Product_quantity>
+        <Product_price>6.5</Product_price>
+      </Product>
+      <Product>
+        <Product_name>sniadanie</Product_name>
+        <Product_index>full</Product_index>
+        <Product_quantity>16</Product_quantity>
+        <Product_price>12</Product_price>
+      </Product>
+    </Products>
+  </Order>
+</Order_Table>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="zamowienia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zamowienia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left" Width="200" Margin="5">
+            <Button Click="DodajZamówienie_Click">Dodaj zamówienie</Button>
+            <ListBox x:Name="ListOfSendedOrders" MouseDoubleClick="ListOfSendedOrders_MouseDoubleClick">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding Path=Company}"/>
+                            <TextBlock Text="{Binding Path=Date}"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBox x:Name="CompanyBox" Width="100"/>
+                <TextBox x:Name="AddressBox" Width="200">mail</TextBox>
+                <Button x:Name="SendButton" Width="120" Click="SendButton_Click">Send Order</Button>
+            </WrapPanel>
+            <DataGrid x:Name="TableOfProducts" AutoGenerateColumns="False" IsReadOnly="{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nazwa" Binding="{Binding Path=NameOfProduct}"/>
+                    <DataGridTextColumn Header="Index" Binding="{Binding Path=IndexOfProduct}" />
+                    <DataGridTextColumn Header="Ilość" Binding="{Binding Path= QuantityOfProduct}"/>
+                    <DataGridTextColumn Header="Cena/szt" Binding="{Binding Path=PriceOfProduct}"/>
+                </DataGrid.Columns>
+                
+            </DataGrid>
+        </StackPanel>
+    </DockPanel>
+</Window>
